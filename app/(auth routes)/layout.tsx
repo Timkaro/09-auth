@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Props = {
+type Props = Readonly<{
   children: React.ReactNode;
-};
+}>;
 
 const PublicLayout = ({ children }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
