@@ -8,7 +8,7 @@ import Pagination from "@/components/Pagination/Pagination";
 import NoteList from "@/components/NoteList/NoteList";
 import Link from "next/link";
 import SearchBox from "@/components/SearchBox/SearchBox";
-import css from "./NotesPage.module.css";
+import css from "./Notes.client.module.css";
 
 type Props = {
   tag?: string;

@@ -1,14 +1,8 @@
 "use client";
 
-import { Metadata } from "next";
 import css from "../ProfilePage.module.css";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/store/authStore";
-
-export const metadata: Metadata = {
-  title: "profile",
-  description: "Edit profile",
-};
 
 export const ProfileEdit = () => {
   const router = useRouter();

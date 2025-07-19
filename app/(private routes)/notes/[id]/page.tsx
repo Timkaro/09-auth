@@ -4,7 +4,7 @@ import {
   dehydrate,
 } from "@tanstack/react-query";
 import { fetchNoteById } from "@/lib/api/clientApi";
-import NoteDetailsClient from "./NoteDetailsClient";
+import NoteDetailsClient from "./NoteDetails.client";
 import { Metadata } from "next";
 
 type MetadataProps = {
@@ -16,9 +16,7 @@ export async function generateMetadata({
 }: MetadataProps): Promise<Metadata> {
   const res = await params;
   const note = await fetchNoteById(res.id);
-  const pageUrl = `https://08-zustand-lyart.vercel.app/notes/${res.id}`;
-  //ЗМІНИТИ АДРЕСУ
-  ерор;
+  const pageUrl = `https://09-auth-git-main-timkaros-projects.vercel.app/notes/${res.id}`;
 
   return {
     title: note.title,

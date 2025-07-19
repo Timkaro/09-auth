@@ -1,5 +1,4 @@
 import NotesClient from "./Notes.client";
-import { fetchNotes } from "@/lib/api/clientApi";
 import { Metadata } from "next";
 
 type Props = {
@@ -10,8 +9,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const category = slug[0] === "All" ? undefined : slug[0];
   const categoryKind = category || "All";
-  const pageUrl = `https://08-zustand-lyart.vercel.app/notes/filter/${categoryKind}`;
-  //change url
+  const pageUrl = `https://09-auth-git-main-timkaros-projects.vercel.app/notes/filter/${categoryKind}`;
 
   return {
     title: `${category ? `${category}` : "All notes"}`,
