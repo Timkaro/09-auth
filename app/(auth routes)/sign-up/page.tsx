@@ -19,7 +19,8 @@ const Register = () => {
         setUser(res);
         router.push("/proile");
       }
-    } catch (error) {
+    } catch {
+      console.log("error", error);
       setError(`{error.message}`);
     }
   };
@@ -27,7 +28,7 @@ const Register = () => {
   return (
     <main className={css.mainContent}>
       <h1 className={css.formTitle}>Sign up</h1>
-      <form className={css.form}>
+      <form action={handleRegister} className={css.form}>
         <div className={css.formGroup}>
           <label htmlFor="email">Email</label>
           <input
