@@ -16,7 +16,7 @@ export async function generateMetadata({
 }: MetadataProps): Promise<Metadata> {
   const res = await params;
   const note = await fetchNoteById(res.id);
-  const pageUrl = `https://09-auth-git-main-timkaros-projects.vercel.app/notes/${res.id}`;
+  const pageUrl = `https://09-auth-beige-five.vercel.app/notes/${res.id}`;
 
   return {
     title: note.title,
