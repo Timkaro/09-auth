@@ -4,11 +4,11 @@ import css from "../ProfilePage.module.css";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/store/authStore";
 
-export const ProfileEdit = () => {
+const ProfileEdit = () => {
   const router = useRouter();
   const user = useAuth((state) => state.user);
 
-  if (!user) return;
+  if (!user) return null;
 
   const handleCancel = () => {
     router.back();
